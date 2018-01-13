@@ -3,9 +3,7 @@ var database = firebase.database();
 
 
 function handleSubmit () {
-  //function writeUserData(userId, name, email, imageUrl) {
-  firebase.database().ref('questions').set({
+  firebase.database().ref('CSE142/Lec1').push({
     question: document.getElementById('validationDefault01').value
   });
-  //}
 }
