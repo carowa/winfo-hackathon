@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <form class="mt-5">
+    <form onsubmit="handleSubmit()" class="mt-5" id="form">
         <div class="form-group row mx-auto">
         <div class="col-md-4 mb-3 mx-auto">
             <label for="validationDefault01">Type Your Question:</label>
@@ -28,7 +28,7 @@
           </div>
         </div>        
         <div class="col-md-4 mx-auto">
-        <button type="submit" class="dropshadow salmon btn btn-primary mb-2">Submit</button>          
+          <button  type="submit" class="dropshadow salmon btn btn-primary mb-2">Submit</button>          
         </div>
       </form>
 
@@ -41,7 +41,19 @@
       </div>
 
 </div>
+<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+<script>
+    var config = {
+      apiKey: "AIzaSyAHIJa723pbThdf-j6KvAYO54gyBWamnmo",
+      authDomain: "winfohackathon-246e1.firebaseapp.com",
+      databaseURL: "https://winfohackathon-246e1.firebaseio.com"
+      //storageBucket: "<BUCKET>.appspot.com",
+      //messagingSenderId: "<SENDER_ID>",
+    };
+    firebase.initializeApp(config);
 
+  </script>
+<script src="./js/controller.js"></script>
 </body>
 </html>
 
