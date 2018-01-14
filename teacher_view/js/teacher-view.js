@@ -37,11 +37,6 @@ directory.on('child_added',function(data) {
     child.appendChild(lowest)
     node.appendChild(child)
 
-    firebase.database().ref('CSE142/Archive/Lec1').push({
-      question: lowest.innerHTML
-    });
-
-
     node.addEventListener('click', function (event) {
       if (hot_question_id !== node.id) {
         document.getElementById("topQuestion").innerHTML = lowest.innerHTML
