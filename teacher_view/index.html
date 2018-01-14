@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ask Away</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link rel="stylesheet" href="../student_view/style/style.css">    
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-primary">
+        <a class="white navbar-brand" href="#">CSE 142 Winter 2018</a>
+        <span class="navbar-text white">
+            Teacher View
+        </span>
+    </nav>
+
+    <div class="jumbotron bg-light ">
+        <h1 id="topQuestion">MyQuestion</h1>
+        <button onclick="finish()" class="btn btn-primary">Finished</button>
+    </div>
+    
+
+    <div class="container">   
+
+        <h3>Question Queue</h3>
+        <div id="list"> </div>
+
+    </div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>        
+    <script>        
+    var config = {      
+        apiKey: "AIzaSyAHIJa723pbThdf-j6KvAYO54gyBWamnmo",      
+        authDomain: "winfohackathon-246e1.firebaseapp.com",     
+        databaseURL: "https://winfohackathon-246e1.firebaseio.com"      
+    };      
+    firebase.initializeApp(config);     
+    
+    </script>       
+    <script src="./js/teacher-view.js"></script>
+
+</body>
+</html>

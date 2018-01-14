@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask Away</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">    
+    <link rel="stylesheet" href="./style/style.css">    
+</head>
+<body class="light-gray">
+
+<nav class="navbar navbar-light bg-primary">
+  <a class="white navbar-brand" href="#">CSE 142 Winter 2018</a>
+  <span class="navbar-text white">
+    Student View
+  </span>
+</nav>
+
+<div class="jumbotron">
+  <div class="row pt-3">
+    <div class="col-md-10 ml-4">
+      <h1>Welcome, August!</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+    <form onsubmit="handleSubmit()" class="mt-5" id="form">
+
+        <div class="form-group">
+            <label for="validationDefault01">Type Your Question:</label>
+            <textarea class="form-control" id="validationDefault01" rows="3"></textarea>
+            <button  type="submit" class="btn btn-primary m-2">Submit</button>
+          </div>
+      </form>
+
+      <form>
+        <div>
+            <label for="notes">Notes:</label>
+            <textarea class="form-control" id="notes" rows="3" cols="50"></textarea>
+        </div>
+      </form>
+</div>
+<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+<script>
+    var config = {
+      apiKey: "AIzaSyAHIJa723pbThdf-j6KvAYO54gyBWamnmo",
+      authDomain: "winfohackathon-246e1.firebaseapp.com",
+      databaseURL: "https://winfohackathon-246e1.firebaseio.com"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+<script src="./js/controller.js"></script>
+</body>
+</html>
