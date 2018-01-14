@@ -16,6 +16,9 @@ function finish () {
     document.getElementById("topQuestion").innerHTML =  node.innerHTML; 
     node.innerHTML = "<strong>" + node.innerHTML + "</strong>";
   }
+  firebase.database().ref('CSE142/Lec1/Archive').push({
+    question: node.innerHTML
+  });
 }
 
 // dynamically update the list
@@ -56,5 +59,8 @@ directory.on('child_added',function(data) {
     document.getElementById("topQuestion").innerHTML = lowest.innerHTML;
     lowest.innerHTML = "<strong>" +  lowest.innerHTML + "</strong>"
   }
+  firebase.database().ref('CSE142/Archive/Lec1').push({
+    question: lowest.innerHTML
+  });
 })
 
