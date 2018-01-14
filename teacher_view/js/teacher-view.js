@@ -3,7 +3,21 @@ var directory = firebase.database().ref('CSE142/Lec1')
 
 var hot_question_id = -1
 var next_id = 0
-
+var stack = []
+function finish () {
+  document.getElementById("list").removeChild(document.getElementById(hot_question_id))
+  // where do we put hot_question_id
+  var list = document.getElementById("list").children;
+  if (list.length == 0) {
+    hot_question_id = -1
+    document.getElementById("topQuestion").innerHTML = "No Questions"
+  } else {
+    var node = list[0];
+    hot_question_id = node.id;
+    document.getElementById("topQuestion").innerHTML = "<strong>" +  node.innerHTML + "</strong>"; 
+    node.innerHTML = "<strong>" + node.innerHTML + "</strong>";
+  }
+}
 // dynamically update the list
 directory.on('child_added',function(data) {
   //if (hot_question_id !== "") {
@@ -25,6 +39,7 @@ directory.on('child_added',function(data) {
       }
     }, false)
     document.getElementById("list").appendChild(node)
+    stack.push(node)
     node.id = "a" + next_id
     next_id++
 
