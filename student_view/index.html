@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">    
-    <link rel="stylesheet" href="./style/style.css">    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body class="light-gray">
 <nav class="navbar navbar-light bg-light salmon dropshadow pb-3">
   <a class="white navbar-brand" href="#">CSE 142 Winter 2018</a>
   <span class="navbar-text white">
-    Student View        
+    Student View
   </span>
 </nav>
-<div class="container-fluid">
+<div class="container">
     <div class="row pt-3">
       <div class="col-md-10 ml-4">
         <h1>Welcome, August!</h1>
@@ -24,15 +24,22 @@
         <div class="form-group row mx-auto">
         <div class="col-md-4 mb-3 mx-auto">
             <label for="validationDefault01">Type Your Question:</label>
-            <textarea class="form-control" id="validationDefault01" rows="3"></textarea>            
+            <textarea class="form-control" id="validationDefault01" rows="3"></textarea>
           </div>
-        </div>        
+        </div>
         <div class="col-md-4 mx-auto">
-          <button  type="submit" class="dropshadow salmon btn btn-primary mb-2">Submit</button>          
+          <button  type="submit" class="dropshadow salmon btn btn-primary mb-2">Submit</button>
         </div>
       </form>
 
-      <div class="fixed-bottom row justify-content-end"> 
+      <div class="col-md-4 mb-3 mx-auto">
+        <label for="validationDefault01">Notes:</label>
+        <textarea rows="4" cols="50">
+
+        </textarea>
+      </div>
+
+      <div class="fixed-bottom row justify-content-end">
         <div class="col-md-3 short text-center align-self-end salmon">
           <a class="white pl-2 pr-2" href="#"> Question App </a>
           <a class="white pl-2 pr-2" href="#"> About Us </a>
@@ -56,6 +63,3 @@
 <script src="./js/controller.js"></script>
 </body>
 </html>
-
-
-
