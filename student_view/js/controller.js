@@ -1,7 +1,6 @@
 // setup up message post
 var database = firebase.database();
 
-
 function handleSubmit () {
 
   let q = document.getElementById('validationDefault01').value;
