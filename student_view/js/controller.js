@@ -18,11 +18,10 @@ function handleSubmit () {
   let isBad4 = badword4.test(q);
   let isBad5 = badword5.test(q);
 
-  if (!isBad1 && !isBad2 && !isBad3 && !isBad4 && !isBad5) {
-    //function writeUserData(userId, name, email, imageUrl) {
-    firebase.database().ref('questions').set({
-      question: q
-    });
-    //}
+  if (!isBad1 && !isBad2 && !isBad3 && !isBad4) {
+      firebase.database().ref('CSE142/Lec1').push({
+        question: document.getElementById('validationDefault01').value
+      });
   }
+
 }
